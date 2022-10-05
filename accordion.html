@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion Component</title>
+
+  <style type="text/css">
+    /* CSS START */
+    @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+      --main-color: #087f5b;
+      --grey-color: #343a40;
+
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      color: var(--grey-color);
+      line-height: 1;
+    }
+
+    .accordion {
+      width: 700px;
+      margin: 100px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .item {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 24px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      column-gap: 24px;
+      row-gap: 12px;
+    }
+
+    /* .text {} */
+
+    .number,
+    .text {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .number,
+    .text,
+    .icon {
+      cursor: pointer;
+    }
+
+    .number {
+      color: #ced4da;
+    }
+
+    .icon {
+      width: 24px;
+      stroke: var(--main-color);
+    }
+
+    .hidden-box {
+      grid-column: 2;
+      display: none;
+    }
+
+    .hidden-box p {
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .hidden-box ul {
+      color: #868e96;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .open {
+      border-top: 4px solid var(--main-color);
+    }
+
+    .open .hidden-box {
+      display: block;
+    }
+
+    .open .number,
+    .open .text {
+      color: var(--main-color);
+    }
+
+    /* CSS END */
+  </style>
+
+</head>
+
+<body>
+  <div class="accordion">
+    <div class="item">
+      <p class="number">01</p>
+      <p class="text">Where are these chairs assembled?</p><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
+      <div class="hidden-box">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, quidem beatae! Facere ipsam nemo debitis
+          distinctio omnis! Facilis, reiciendis facere nam veritatis culpa quasi ipsa, soluta.</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="item open">
+      <p class="number">02</p>
+      <p class="text">How long do I have to return my chairs?</p><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
+      <div class="hidden-box">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, quidem beatae! Facere ipsam nemo debitis
+          distinctio omnis! Facilis, reiciendis facere nam veritatis culpa quasi ipsa, soluta.</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="item">
+      <p class="number">03</p>
+      <p class="text">Do you to countries </p><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
+      <div class="hidden-box">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, quidem beatae! Facere ipsam nemo debitis
+          distinctio omnis! Facilis, reiciendis facere nam veritatis culpa quasi ipsa, soluta.</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
