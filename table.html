@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Component</title>
+
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+      --main-color: #087f5b;
+      --grey-color: #343a40;
+
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      color: var(--grey-color);
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+      ;
+    }
+
+    table {
+      width: 800px;
+      margin-top: 100px;
+      /* border: 1px solid var(--grey-color); */
+      border-collapse: collapse;
+      font-size: 18px;
+    }
+
+    td,
+    th {
+      /* border: 1px solid var(--grey-color); */
+      padding: 16px 24px;
+      text-align: left;
+    }
+
+    thead tr {
+      color: #fff;
+      background-color: var(--main-color);
+    }
+
+    thead th {
+      width: 25%;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f8f9fa;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #e9ecef;
+      ;
+    }
+  </style>
+
+</head>
+
+<body>
+  <table>
+    <!-- Table Header -->
+    <thead>
+      <tr>
+        <th>Chair</th>
+        <th>The Laid Back</th>
+        <th>The Worker Bee</th>
+        <th>The Chair 4/2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Width</th>
+        <td>80 cm</td>
+        <td>60 cm</td>
+        <td>220 cm</td>
+      </tr>
+      <tr>
+        <th>Height</th>
+        <td>100 cm</td>
+        <td>110 cm</td>
+        <td>90 cm</td>
+      </tr>
+      <tr>
+        <th>Depth</th>
+        <td>70 cm</td>
+        <td>65 cm</td>
+        <td>80 cm</td>
+      </tr>
+      <tr>
+        <th>Weight</th>
+        <td>16 kg</td>
+        <td>22 kg</td>
+        <td>80 kg</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
